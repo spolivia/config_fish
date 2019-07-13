@@ -1,0 +1,41 @@
+#!/bin/bash
+
+SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+deploy_to_target() {
+
+  local BACKUP_DIR="$HOME/.backup/"
+  local TARGET_DIR=`dirname $2`
+  local TARGET=`basename $2`
+  
+  echo "Linking : $2 => $SCRIPT_PATH/$1"
+  
+  # if the .config_backup folder doesn't exist, create it
+   
+  if [ ! -d "$BACKUP_DIR" ]; then
+    echo "   $BACKUP_DIR is missing. Creating it ... "
+    mkdir $BACKUP_DIR && echo "     Success"
+  fi
+  
+  if [ -L $2 ]; then
+    echo "   Old $2 is a symbolic link. Removing it"
+    rm -f $2 
+  fi
+
+  if [ -d $2 ]; then
+    echo "   Old $2 is a directory. Moving it to backup folder"
+    mv -f $2 $BACKUP_DIR 
+  fi
+
+  if [ -e $2 ]; then
+    echo "   Old $2 is a file. Moving it to backup folder"
+    mv -f $2 $BACKUP_DIR 
+  fi
+
+  cd $TARGET_DIR
+  ln -s "$SCRIPT_PATH/$1" $TARGET            
+
+}
+
+deploy_to_target "fish" "$HOME/.config/fish"
+
