@@ -1,6 +1,5 @@
 set -U fish_prompt_color_userhost green
 set -U fish_prompt_color_cwd  blue
-set -U fish_prompt_color_git  yellow
 
 function fish_prompt --description 'Write out the prompt'
   
@@ -14,11 +13,6 @@ function fish_prompt --description 'Write out the prompt'
   printf ' '
   set_color --bold $fish_prompt_color_cwd
   printf (prompt_pwd)
-
-  # git status
-
-  set_color --bold $fish_prompt_color_git
-  fish_prompt_git
 
   if not test $last_status -eq 0
     set_color --bold $fish_color_error
