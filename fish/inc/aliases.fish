@@ -2,6 +2,7 @@
 
 alias ll 'ls -al --color'
 alias ls 'ls -l --color'
+alias grep 'grep --color=auto'
 alias rsync 'rsync -Pave ssh'
 alias pavucontrol 'env LC_ALL=C pavucontrol'
 
