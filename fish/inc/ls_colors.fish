@@ -1,5 +1,5 @@
-set -gx LS_COLORS "rs=0"                             # ? rs
-set -gx LS_COLORS "$LS_COLORS:di=01;34"              # directory
+set -gx LS_COLORS "$LS_COLORS:rs=01;90"              # rs : couleur de base 
+set -gx LS_COLORS "$LS_COLORS:di=0;34"              # directory
 set -gx LS_COLORS "$LS_COLORS:ln=01;36"              # symbolic link
 set -gx LS_COLORS "$LS_COLORS:mh=00"                 # ? mh
 set -gx LS_COLORS "$LS_COLORS:pi=40;33"              # fifo file
@@ -45,23 +45,23 @@ set -gx LS_COLORS "$LS_COLORS:*.dia=0;35"
 
 # [cyan] text files
 
-set -gx LS_COLORS "$LS_COLORS:*.txt=0;36"     
-set -gx LS_COLORS "$LS_COLORS:*.md=0;36"       
-set -gx LS_COLORS "$LS_COLORS:*.conf=0;36"      
-set -gx LS_COLORS "$LS_COLORS:*.log=0;36"        
-set -gx LS_COLORS "$LS_COLORS:*.1=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.2=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.3=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.4=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.5=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.6=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.7=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*.8=0;36"           
-set -gx LS_COLORS "$LS_COLORS:*AUTHORS=0;36"          
-set -gx LS_COLORS "$LS_COLORS:*LICENSE=0;36"          
-set -gx LS_COLORS "$LS_COLORS:*README=0;36"          
-set -gx LS_COLORS "$LS_COLORS:*TODO=0;36"          
-set -gx LS_COLORS "$LS_COLORS:*COPYING=0;36"          
+set -gx LS_COLORS "$LS_COLORS:*.txt=0;95"     
+set -gx LS_COLORS "$LS_COLORS:*.md=0;95"       
+set -gx LS_COLORS "$LS_COLORS:*.conf=0;95"      
+set -gx LS_COLORS "$LS_COLORS:*.log=0;95"        
+set -gx LS_COLORS "$LS_COLORS:*.1=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.2=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.3=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.4=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.5=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.6=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.7=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*.8=0;95"           
+set -gx LS_COLORS "$LS_COLORS:*AUTHORS=0;95"          
+set -gx LS_COLORS "$LS_COLORS:*LICENSE=0;95"          
+set -gx LS_COLORS "$LS_COLORS:*README=0;95"          
+set -gx LS_COLORS "$LS_COLORS:*TODO=0;95"          
+set -gx LS_COLORS "$LS_COLORS:*COPYING=0;95"          
 
 # [orange] compilation tools
 

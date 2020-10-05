@@ -1,12 +1,11 @@
-set -U fish_prompt_color_userhost green
-set -U fish_prompt_color_cwd  blue
+set -U fish_prompt_color_userhost brmagenta
+set -U fish_prompt_color_cwd  brblue
 
 function fish_prompt --description 'Write out the prompt'
   
   set -l last_status $status
 
   set_color --bold $fish_prompt_color_userhost
-  printf '\n'
   printf (whoami)
   printf '@'
   printf (hostname -s)
